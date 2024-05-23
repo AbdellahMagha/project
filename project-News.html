@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fjalla+One&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rakkas&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Rakkas&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+ 
+      .kolchi{
+    display: flex;
+    flex-direction: column;
+    
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+      }
+.wrapper-1 , .wrapper-2 , .wrapper-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 35px;
+   /* position: relative;*/
+}
+.wrapper-1{
+    margin: 100px 0 0 0;
+}
+/*.res {
+    height: 60px;
+    width: 100%;
+    color: aliceblue;
+    background-color: #25252b;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;  Adjust as needed 
+    margin-bottom: 20px;  Adjust as needed 
+}*/
+
+footer {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+        
+/*.kolchi{
+    display: flex;
+    flex-direction: column;
+}
+        .wrapper-1 , .wrapper-2 , .wrapper-3{
+            display: flex;
+           flex-wrap: wrap;
+            justify-content: center;
+          gap: 20px;
+ margin: 15px;
+  position: relative;
+  top: 250px;
+
+        }
+*/
+       .card-1 , .card-2, .card {
+            width: 300px;
+           height: auto; 
+            padding: 2rem 1rem;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+            transition: 0.5s ease-in-out;
+            margin-bottom: 20px;
+            margin: 30px 30px 30px 30px;
+        }
+.card-1{
+width: 80%;
+height: auto;
+}
+.card-2 {
+width: 30%;
+}
+        .card-2:hover , .card-1:hover ,.card:hover{
+            transform: translateY(20px);
+        }
+
+        .card-1::before ,.card-2::before , .card::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgb(184, 0, 0), rgba(255, 255, 255, 0));
+            z-index: 2;
+            transition: 0.5s all;
+            opacity: 0;
+        }
+
+        .card:hover::before , .card-1:hover::before , .card-2:hover::before {
+            opacity: 1;
+        }
+
+        .card img , .card-1 img ,.card-2 img {
+            width: 100%;
+            height: 100%; /* Adjust as needed */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .card-1 .info , .card-2 .info  ,.card .info {
+            position: relative;
+            z-index: 3;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.5s all;
+            text-align: center;
+        }
+
+        .card-1:hover .info , .card-2:hover .info , .card:hover .info {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+     /*   .card-1 .info h2 ,.card-2 .info h2 , .card .info h2{
+            font-size: 30px;
+            margin: 0;
+        }
+*/
+        .card-1 .info p , .card-2 .info p ,.card .info p {
+            letter-spacing: 1px;
+            font-size: 20px;
+            /*margin-top: 20px;*/
+         /*   margin-bottom: 20px;*/
+         color: #ffffff;
+         
+        }
+
+        .card-1 .info .btn , .card-2 .info .btn , .card .info .btn {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000000;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-1 .info .btn:hover , .card-2 .info .btn:hover ,.card .info .btn:hover {
+            background-color: #0056b3;
+        }
+        .wrapper-1{
+            height: 800px;
+        }
+       .wrapper-2 {
+        
+        height: 500px;
+       }
+       .wrapper-3{
+        height: 400px;
+       }
+
+       header {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space items evenly */
+            background-color: rgba(208, 0, 0, 0.8); /* Add red background */
+            /*padding: 0 0 0 0;  Add padding for spacing */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+            font-family: "Teko", sans-serif;
+        }
+
+    
+        .logo {
+            margin-left: 50px;
+            height:60px ; 
+            
+        }
+
+        .site-footer {
+           
+           padding: 20px 0;
+           font-family: "Teko", sans-serif;
+       }
+
+       .follow-us-bar {
+           background-color: rgba(208, 0, 0, 0.8);
+           color: #fff;
+           padding: 10px 20px;
+           margin-bottom: 20px;
+           display: flex;
+           align-items: center;
+           justify-content: flex-start;
+       }
+
+       .follow-us-bar h3 {
+           margin: 0;
+           font-size: 20px;
+       }
+
+       .social-icons {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           text-align: right;
+       }
+
+       .social-icons li {
+           display: inline-block;
+           margin-left: 10px;
+       }
+
+       .social-icons li:first-child {
+           margin-left: 0;
+       }
+
+       .social-icons a {
+           display: inline-block;
+           width: 40px;
+           height: 40px;
+           background-color: #333;
+           text-align: center;
+           line-height: 40px;
+           border-radius: 50%;
+           color: #fff;
+           font-size: 20px;
+           transition: background-color 0.3s ease;
+       }
+
+       .social-icons a:hover {
+           background-color: #007bff;
+       }
+     
+          /* CSS Styles */
+          header {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space items evenly */
+            background-color: rgba(208, 0, 0, 0.8); /* Add red background */
+            /*padding: 0 0 0 0;  Add padding for spacing */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+            font-family: "Teko", sans-serif;
+        }
+
+        .img-nav {
+            margin-right: 20px; /* Add margin to separate the logo from the navigation */
+        }
+
+        #navbar {
+            display: inline-block; /* Make the navigation menu inline-block */
+            padding: 0 50px;
+           /* font-family: Impact, sans-serif;*/
+
+        }
+
+        #navbar ul {
+            list-style: none; /* Remove default list styles */
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar li {
+            display: inline;
+            margin-right: 40px; /* Adjust spacing between navigation items */
+        }
+
+        #navbar li:last-child {
+            margin-right: 0; /* Remove margin from the last navigation item */
+        }
+
+        #navbar li a {
+            margin: 0 20px 0 20px;
+            font-size: 25px;
+            text-decoration: none;
+            color: rgb(255, 255, 255); /* Change link color as needed */
+            position: relative;
+        }
+        .nv2::after , #navbar li a:hover::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px; /* Adjust the thickness of the underline */
+            background-color: rgb(0, 0, 0); /* Change underline color as needed */
+            bottom: -3px; /* Adjust the distance from the text */
+            left: 0;
+        }
+
+       #navbar li a:hover{
+            color: #000;
+           transition: 0.5s;
+        }
+        .logo {
+            margin-left: 50px;
+            height:60px ; 
+            
+        }
+
+        .site-footer {
+        /*    background-color: #f8f9fa;*/
+            padding: 20px 0;
+            font-family: "Teko", sans-serif;
+        }
+
+        .follow-us-bar {
+            background-color: rgba(208, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .follow-us-bar h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons li:first-child {
+            margin-left: 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #007bff;
+        }
+        .body-news{
+            background-image: url("C:/Users/azertyuiop/Pictures/BACKGROUND-KAF.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        }
+   </style>
+</head>
+
+    <body class="body-news">
+        
+       
+<header>
+    <!-- Header section containing logo and navigation -->
+    <div class="img-nav">
+        <!-- Logo section -->
+        <a href="#"><img src="C:\Users\azertyuiop\Desktop\our planet\REAL LOGO KACM.png" alt="Logo" class="logo"></a>
+    </div>
+    <!-- Navigation section -->
+    <nav id="navbar">
+        <ul>
+            <!-- Navigation items -->
+            <li><a href="project-home.html" class="nv1">HOME</a></li>
+            <li><a href="project-News.html" class="nv2">NEWS</a></li>
+            <li><a href="project-history.html" class="nv3">HISTORY</a></li>
+            <li><a href="project-shop.html" class="nv4">SHOP</a></li>
+            <li><a href="project-Login.html" class="nv5"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<div class="kolchi">   
+    <div class="wrapper-1">
+        
+        <div class="card-1">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\squad.jpg" alt="">
+            <div class="info">
+                <p style="font-size: x-large; letter-spacing: 2px;"><b>
+                    Distribute 6 grants among 3 wins (Al-Ittifaq, Al-Jadida, Widad Fez) + 3 draws (Shabab Ibn Jarrar, Islamic Union Wajdi, Association Sala) in bank accounts, pending payment of remaining dues after receipt of municipal grant next week due to Kokb management delay. </b></p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/ptoject-news-1.html" class="btn">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-2">
+        
+        <div class="card-2">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\391620148_18239954854231335_2091341108611108710_n.jpg" alt="">
+            <div class="info">
+                <p>Kawkab Marrakech resumes championship, facing Olympic Dcheira in a spectator-less match due to renovations at Ahmed Vana Stadium. </p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-2.html" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card-2">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="">
+            <div class="info">
+                <p>Under-15 team wins regional title, advancing to Rabat tournament despite Under-14 team's final defeat.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-3.html" class="btn">Read more</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-3">
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\rafiaa.jpg" alt="">
+            <div class="info">
+                <p>Hamza Rafii re-injures hamstring during solo training, sidelined for two months.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-4.html" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\Men's basketball.jpg" alt="">
+            <div class="info">
+                <p>Kawkab Marrakech basketball team defeats Wydad Casablanca 72-70, securing spot in premier division with 27 points.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-5.html" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\trainings.jpg" alt="">
+            <div class="info">
+                <p>Kawkab Marrakech players resume training today after cup match, with a friendly against a first division team scheduled for the weekend after a three-day break.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-6.html" class="btn">Read more</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-3">
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\women's basketball.jpg" alt="">
+            <div class="info">
+                <p>Kawkab Marrakech women's basketball team continues winning streak, defeating Wydad 62-35.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-7.html" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\momodo.jpg" alt="">
+            <div class="info">
+                <p>
+                    Kawkab Marrakech triumphs 3-1 over Fath Rabat at home, with goals from Momodou (twice) and Youssoufa Bob . </p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-8.html" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\azertyuiop\Desktop\our planet\founti.jpg" alt="">
+            <div class="info">
+                <p>Kawkab Marrakech's player, Hamza Founti, is out due to injury, leaving a gap in the team's lineup.</p>
+                <a href="file:///C:/Users/azertyuiop/Desktop/html/project-news-9.html" class="btn">Read more</a>
+            </div>
+        </div>
+    </div>
+</div> 
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="follow-us-bar">
+                    <h3>Follow Us</h3>
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#" class="facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <!-- Add more social icons here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
+
+</html>

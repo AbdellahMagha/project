@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Rakkas&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rakkas&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+                
+    <style>
+                header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(208, 0, 0, 0.8);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+            font-family: "Teko", sans-serif;
+        }
+
+        .img-nav {
+            margin-right: 20px;
+        }
+
+        #navbar {
+            display: inline-block;
+            padding: 0 50px;
+        }
+
+        #navbar ul {
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar li {
+            display: inline;
+            margin-right: 40px;
+        }
+
+        #navbar li:last-child {
+            margin-right: 0;
+        }
+
+        #navbar li a {
+            margin: 0 20px 0 20px;
+            font-size: 25px;
+            text-decoration: none;
+            color: rgb(255, 255, 255); 
+            position: relative;
+        }
+        .nv1::after , #navbar li a:hover::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            bottom: -3px;
+            left: 0;
+        }
+
+       #navbar li a:hover{
+            color: #000;
+           transition: 0.5s;
+        }
+        .logo {
+            margin-left: 50px;
+            height:60px ; 
+            
+        }
+
+        .site-footer {
+           
+            padding: 20px 0;
+            font-family: "Teko", sans-serif;
+        }
+
+        .follow-us-bar {
+            background-color: rgba(208, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .follow-us-bar h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons li:first-child {
+            margin-left: 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #007bff;
+        }
+      
+        .main-img{
+            width: 100%;
+        }
+
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(222, 222, 222);
+            
+        }
+        .gallery {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 80px;
+}
+
+.image-container {
+    margin-right: 40px; 
+    width: 250px;    
+    
+}
+
+.image-container h2 {
+    background-color: rgb(128, 0, 0);
+    width: 250px;
+    color: white; 
+    text-align: center; 
+    padding: 5px 0;
+    border-radius: 0 0 50% 50%;
+
+}
+
+.img1 {
+    width: 100%; 
+    height: auto;
+}
+.title-bar {
+            background: linear-gradient(to right, #ff2c2c, #c10000);
+            color: rgb(21, 29, 45);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 0 0 50% 50%;
+            width: 790px;
+            height: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+        }
+        .title-bar h1 {
+           margin-top: -10px;
+            font-size: 40px;
+        }
+        .all-content{
+            font-family: 'Agency FB', sans-serif;
+            display: flex;
+            margin-top: 80px;
+
+        }
+        .slider {
+    width: 90%; 
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 10px 30px 10px;
+    border: solid  rgb(21, 29, 45, 0.7);
+    border-radius: 8px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  .link-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    
+    cursor: pointer;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 30px;
+    width: 100%;
+
+  }
+  .aa:hover{
+    background-color: #c10000;
+  }
+  .right-content {
+    width: 100%; 
+    
+
+}
+.iimg{
+    width: 80%;
+}
+.aa{
+    color: rgb(21, 29, 45); 
+  text-decoration: none; 
+  position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    border: none;
+    padding: 10px 20px  ;
+    
+    cursor: pointer;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 30px;
+    width: 100%;
+
+}
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <!-- Header section containing logo and navigation -->
+    <div class="img-nav">
+        <!-- Logo section -->
+        <a href="#"><img src="C:\Users\azertyuiop\Desktop\our planet\REAL LOGO KACM.png" alt="Logo" class="logo"></a>
+    </div>
+    <!-- Navigation section -->
+    <nav id="navbar">
+        <ul>
+            <!-- Navigation items -->
+            <li><a href="project-home.html" class="nv1">HOME</a></li>
+            <li><a href="project-News.html" class="nv2">NEWS</a></li>
+            <li><a href="project-history.html" class="nv3">HISTORY</a></li>
+            <li><a href="project-shop.html" class="nv4">SHOP</a></li>
+            <li><a href="project-Login.html" class="nv5"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </nav>
+</header>
+<img src="C:\Users\azertyuiop\Desktop\our planet\MAGHATON.png" alt="" class="main-img">
+<section class="all-content">
+    
+    <div class="left-content">
+        <div class="title-bar">
+            <h1>RESULTS</h1>
+        </div>
+        <div class="gallery">
+            <div class="image-container">
+                <h2>LAST MATCH</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\next.jpg" alt="Majestic Mountain View">
+            </div>
+            <div class="image-container">
+                <h2>RANKING</h2>
+                <img src="C:\Users\azertyuiop\Desktop\our planet\next.jpg" alt="Serene Beach Sunset" class="img1">
+            </div>
+            <div class="image-container">
+                <h2>NEXT MATCH</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\next.jpg" alt="Bustling Cityscape at Night">
+            </div>
+        </div>
+        <div class="title-bar">
+            <h1>STAFF</h1>
+        </div>
+        <div class="gallery">
+            <div class="image-container">
+                <h2>COACH</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\coach1.jpg" >
+            </div>
+            <div class="image-container">
+                <h2>ASSISTANT COACH</h2>
+                <img src="C:\Users\azertyuiop\Desktop\our planet\coach2.jpg"  class="img1">
+            </div>
+            <div class="image-container">
+                <h2>PHYSICAL TRAINER</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\coach3.jpg" >
+            </div>
+        </div>
+        <div class="title-bar">
+            <h1>SCORERS</h1>
+        </div>
+        <div class="gallery">
+            <div class="image-container">
+                <h2>momodo</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\momodo2.jpg" alt="Majestic Mountain View">
+            </div>
+            <div class="image-container">
+                <h2>founti</h2>
+                <img src="C:\Users\azertyuiop\Desktop\our planet\fnt.pnj.jpg" alt="Serene Beach Sunset" class="img1">
+            </div>
+            <div class="image-container">
+                <h2>kombos</h2>
+                <img class="img1" src="C:\Users\azertyuiop\Desktop\our planet\kombos.pnj.jpg" alt="Bustling Cityscape at Night">
+            </div>
+        </div>
+
+    </div>
+    <div class="right-content">
+        
+            <div class="slider">
+              <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\his1.jpg" ></div>
+              <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\his2.jpg" ></div>
+              <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\his3.jpg" ></div>
+              <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\his2.jpg" ></div>
+              <a href=file:///C:/Users/azertyuiop/Desktop/our%20planet/project-history.html class="aa"><b>SEE MORE</b></a>
+            </div>
+
+            <img src="C:\Users\azertyuiop\Desktop\our planet\REAL LOGO KACM.png" class="iimg">
+            <div class="slider">
+                <div class="slide"><img src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204201.png" alt="Image 1"></div>
+                <div class="slide"><img src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 203600.png" alt="Image 2"></div>
+                <div class="slide"><img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit21.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit.jpg" alt="Image 4"></div>
+                <a href="//C:/Users/azertyuiop/Desktop/our%20planet/project-shop.html" class="aa"><b>SHOP NOW</b></a>
+              </div>
+
+
+
+    </div>
+
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="follow-us-bar">
+                    <h3>Follow Us</h3>
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#" class="facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <!-- Add more social icons here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sliders = document.querySelectorAll(".slider");
+      
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.classList.add("active");
+            } else {
+              slide.classList.remove("active");
+            }
+          });
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      });
+    });
+  </script>
+</body>
+</html>

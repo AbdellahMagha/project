@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  .slider-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slider {
+    width: 30%; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  .link-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\31.JPEG.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\founti.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 4"></div>
+      <button class="link-button" onclick="window.location.href='https://example.com';">Visit Website</button>
+    </div>
+  
+    <div class="slider">
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\31.JPEG.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\founti.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 4"></div>
+      <button class="link-button" onclick="window.location.href='https://example.com';">Visit Website</button>
+    </div>
+  
+    <div class="slider">
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\31.JPEG.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\founti.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="C:\Users\azertyuiop\Desktop\our planet\kawkab academy.jpg" alt="Image 4"></div>
+      <button class="link-button" onclick="window.location.href='https://example.com';">Visit Website</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sliders = document.querySelectorAll(".slider");
+      
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll(".slide");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.classList.add("active");
+            } else {
+              slide.classList.remove("active");
+            }
+          });
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Rakkas&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(45deg, #25252b, #b00000);
+            margin: 0 0 0 0;
+        
+        }
+        
+        #product1 {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pro-container {
+            padding: 20px;
+            width: calc(33.33% - 40px); 
+            box-sizing: border-box;
+        }
+
+        .pro {
+            padding: 10px 12px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+            margin: 15px 0;
+            transition: all 0.3s linear;
+            position: relative;
+        }
+
+        .pro:hover {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
+            transform: scale(1.01);
+        }
+
+        .slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	/**aspect-ratio: 16 / 9;*/
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; 
+	scrollbar-width: none; 
+}
+
+
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 auto;
+	scroll-snap-align: start;
+	object-fit: contain;
+    height: auto;
+    
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #000000;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+        .pro img {
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        .pro .des {
+            text-align: start;
+            padding: 10px 0;
+        }
+
+        .pro .des span {
+            color: #000;
+            font-size: 12px;
+        }
+
+        .pro .des h5 {
+            padding-top: 7px;
+            color: black;
+            font-size: 14px;
+        }
+
+       
+        .pro .des .h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+         
+        #product1 .pro .cart {
+            width: 40px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #000;
+            
+            border-radius: 30px;
+
+        }
+       .body-shop {
+            background-color: #c4c4c4;
+        }
+        .shop-image1{
+            width: 100%; height: auto;
+            
+            20px 20px 30px rgba(0, 0, 0, 0.6);
+
+        }
+        
+    
+
+.ttt1{
+   font-size: 30px;
+   
+   font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;}
+.ttt2{
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+}
+.cart{
+font-size: 30px;
+
+}
+.shop-image1{
+    width: 100%;
+    height: auto;
+}
+
+  /* CSS Styles */
+  header {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space items evenly */
+            background-color: rgba(208, 0, 0, 0.8); /* Add red background */
+            /*padding: 0 0 0 0;  Add padding for spacing */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+            font-family: "Teko", sans-serif;
+        }
+
+        .img-nav {
+            margin-right: 20px; /* Add margin to separate the logo from the navigation */
+        }
+
+        #navbar {
+            display: inline-block; /* Make the navigation menu inline-block */
+            padding: 0 50px;
+           /* font-family: Impact, sans-serif;*/
+
+        }
+
+        #navbar ul {
+            list-style: none; /* Remove default list styles */
+            padding: 0;
+            margin: 0;
+        }
+
+        #navbar li {
+            display: inline;
+            margin-right: 40px; /* Adjust spacing between navigation items */
+        }
+
+        #navbar li:last-child {
+            margin-right: 0; /* Remove margin from the last navigation item */
+        }
+
+        #navbar li a {
+            margin: 0 20px 0 20px;
+            font-size: 25px;
+            text-decoration: none;
+            color: rgb(255, 255, 255); /* Change link color as needed */
+            position: relative;
+        }
+        .nv4::after , #navbar li a:hover::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px; /* Adjust the thickness of the underline */
+            background-color: rgb(0, 0, 0); /* Change underline color as needed */
+            bottom: -3px; /* Adjust the distance from the text */
+            left: 0;
+        }
+
+       #navbar li a:hover{
+            color: #000;
+           transition: 0.5s;
+        }
+        .logo {
+            margin-left: 50px;
+            height:60px ; 
+            
+        }
+
+        .site-footer {
+            padding: 20px 0;
+            font-family: "Teko", sans-serif;
+        }
+
+        .follow-us-bar {
+            background-color: rgba(208, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .follow-us-bar h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons li:first-child {
+            margin-left: 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body id="body-shop">
+
+    
+<header>
+    <!-- Header section containing logo and navigation -->
+    <div class="img-nav">
+        <!-- Logo section -->
+        <a href="#"><img src="C:\Users\azertyuiop\Desktop\our planet\REAL LOGO KACM.png" alt="Logo" class="logo"></a>
+    </div>
+    <!-- Navigation section -->
+    <nav id="navbar">
+        <ul>
+            <!-- Navigation items -->
+            <li><a href="project-home.html" class="nv1">HOME</a></li>
+            <li><a href="project-News.html" class="nv2">NEWS</a></li>
+            <li><a href="project-history.html" class="nv3">HISTORY</a></li>
+            <li><a href="project-shop.html" class="nv4">SHOP</a></li>
+            <li><a href="project-Login.html" class="nv5"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <img class="shop-image1" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 184000.png" >
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204201.png" />
+                    <img id="slide-2" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204243.png"  />
+                    <img id="slide-3" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204218.png" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+
+            <div class="des">
+                    
+                    <p class="ttt1">HOME SHIRT</p>
+                    <p class="ttt2">199.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-11" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 203941.png" />
+                    <img id="slide-12" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 203750.png" />
+                    <img id="slide-13" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 203721.png" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-11"></a>
+                    <a href="#slide-12"></a>
+                    <a href="#slide-13"></a>
+                </div>
+            </div>
+
+            <div class="des">
+                    <p class="ttt1">AWAY SHIRT</p>
+                    <p class="ttt2">199.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-21" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204021.png" />
+                    <img id="slide-22" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204114.png" />
+                    <img id="slide-23" src="C:\Users\azertyuiop\Pictures\Screenshots\Screenshot 2024-03-18 204045.png" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-21"></a>
+                    <a href="#slide-22"></a>
+                    <a href="#slide-23"></a>
+                </div>
+            </div>
+
+            <div class="des">
+                    <p class="ttt1">THIRD SHIRT</p>
+                    <p class="ttt2">199.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit21.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">WHITE HOODIE</p>
+                    <p class="ttt2">299.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit22.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">BLACK HOODIE</p>
+                    <p class="ttt2">299.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Desktop\our planet\WhatsApp Image 2024-03-25 at 01.05.37_88c498a7.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">RED HOODIE</p>
+                    <p class="ttt2">299.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit31.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">RED SHIRT</p>
+                    <p class="ttt2">99.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">WHITE SHIRT</p>
+                    <p class="ttt2">99.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Pictures\Screenshots\english\kit.jpg" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">BLACK SHIRT</p>
+                    <p class="ttt2">99.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Desktop\our planet\IMG_6377.JPG" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">WITHE TRACKSUIT</p>
+                    <p class="ttt2">399.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="C:\Users\azertyuiop\Desktop\our planet\IMG_6376.JPG" alt="Product Image">
+                <div class="des">
+                    <p class="ttt1">BLACK TRACKSUIT</p>
+                    <p class="ttt2">399.00 MAD</p>
+                </div>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="follow-us-bar">
+                        <h3>Follow Us</h3>
+                    </div>
+                    <ul class="social-icons">
+                        <li><a href="#" class="facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <!-- Add more social icons here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
